@@ -1,1 +1,7 @@
-<span [attr.data-numbers]="data" (click)="dataBackup($event)"  >{{ name }}</span>
+<div
+  (click)="dataBackup($event)"
+  [attr.data-numbers]="data"
+  class="box__main__right__box__bottomRight"
+>
+  <span [attr.data-numbers]="data">{{ name }}</span>
+</div>
