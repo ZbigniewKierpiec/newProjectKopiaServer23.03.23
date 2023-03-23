@@ -1,0 +1,18 @@
+
+<div class="panel-left">
+  <div class="panel-top">
+    <div class="clock">
+      <!-- <p class="clock__hour">12:30 <span>pm</span></p> -->
+      <span  class="clock__hour">{{ dateTime | date : "HH:mm" }}</span>
+    </div>
+  </div>
+  <div class="panel-middle">
+    <ul class="panel-middle__list">
+      <li  (click)="iconActive(item)" *ngFor="let item of icons" [ngClass]="{'active': isSelected === item}"  class="panel-middle__list__items">
+        <i  [ngClass]="{'active animate__animated animate__flip ': isSelected === item}"      class="{{item.icon}}"></i>
+      </li>
+
+    </ul>
+  </div>
+  <div class="panel-bottom"></div>
+</div>

@@ -1,0 +1,298 @@
+<div [ngClass]="active" class="box">
+  <app-more1  *ngIf="more1"(switch)="test()"></app-more1>
+  <app-more2 *ngIf="more2"(switch)="test2()" ></app-more2>
+
+  <div class="box__bath">
+
+    <div class="box__bath__left">
+
+      <div class="box__bath__left__top">
+        <div class="box__bath__left__top__title">
+          <p>shower presets</p>
+          <p>+Add presets</p>
+        </div>
+        <div class="box__bath__left__top__box">
+          <div
+            [classList]="
+              isActive == item.name
+                ? 'box__bath__left__top__box__morning active'
+                : 'box__bath__left__top__box__morning'
+            "
+            (click)="activeItem(item)"
+            *ngFor="let item of shower"
+            class="box__bath__left__top__box__morning"
+          >
+            <div class="box__bath__left__top__box__morning__left">
+              <i
+                [classList]="item.icon"
+                [class.active]="item.name === isActive"
+              ></i>
+              <p [classList]="isActive == item.name ? 'active' : ''">
+                {{ item.name }}
+              </p>
+            </div>
+            <div
+              [classList]="
+                isActive == item.name
+                  ? 'active box__bath__left__top__box__morning__right'
+                  : 'box__bath__left__top__box__morning__right'
+              "
+              class="box__bath__left__top__box__morning__right"
+            >
+              <p>{{ item.temp }}&#8451;</p>
+              <p>{{ item.pro }}%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box__bath__left__bottom">
+        <div class="box__bath__left__bottom__title">
+          <p>weather</p>
+        </div>
+        <div class="box__bath__left__bottom__box">
+          <div class="box__bath__left__bottom__box__left">
+            <div class="box__bath__left__bottom__box__left__top">
+              <p>25&#8451;</p>
+              <span>19&#176;</span>
+            </div>
+            <div class="box__bath__left__bottom__box__left__bottom">
+              <p>saturday,</p>
+              <p>04 March</p>
+            </div>
+          </div>
+
+          <div class="box__bath__left__bottom__box__right">
+            <i class="fa-regular fa-sun"></i>
+            <p>sunny</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box__bath__middle">
+      <div class="box__bath__middle__top">
+        <div class="box__bath__middle__top__one">
+          <div class="box__bath__middle__top__one__left">
+            <div class="box__bath__middle__top__one__left__top">
+              <i class="fa-sharp fa-solid fa-caret-up"></i>
+            </div>
+            <div class="box__bath__middle__top__one__left__bottom">
+              <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="box__bath__middle__top__one__right">
+            <div class="box__bath__middle__top__one__right__top">
+              <div class="box__bath__middle__top__one__right__top__left">
+                <div class="box__bath__middle__top__one__right__top__left__btn">
+                  <button>All On</button>
+                </div>
+                <div class="box__bath__middle__top__one__right__top__left__btn">
+                  <button>all off</button>
+                </div>
+              </div>
+              <div class="box__bath__middle__top__one__right__top__right">
+                <div
+                  class="box__bath__middle__top__one__right__top__right__btn"
+                >
+                  <button>entertain</button>
+                </div>
+                <div
+                  class="box__bath__middle__top__one__right__top__right__btn"
+                >
+                  <button>night</button>
+                </div>
+              </div>
+            </div>
+            <div   (click)="setMore()"   class="box__bath__middle__top__one__right__bottom">
+              <div
+                class="box__bath__middle__top__one__right__bottom__left"
+              ></div>
+              <div   class="box__bath__middle__top__one__right__bottom__right">
+                <button   >
+                  more <i class="fa-sharp fa-solid fa-caret-down"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box__bath__middle__top__two">
+          <div class="box__bath__middle__top__two__left">
+            <div
+              (click)="temp('+')"
+              class="box__bath__middle__top__two__left__top"
+            >
+              <i class="fa-sharp fa-solid fa-caret-up"></i>
+            </div>
+            <div class="box__bath__middle__top__two__left__middle">
+              <p>{{ temperature }}&deg;C</p>
+            </div>
+            <div
+              (click)="temp('-')"
+              class="box__bath__middle__top__two__left__bottom"
+            >
+              <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="box__bath__middle__top__two__right">
+            <div class="box__bath__middle__top__two__right__top">
+              <div class="box__bath__middle__top__two__right__top__left">
+                <div class="box__bath__middle__top__two__right__top__left__top">
+                  <div
+                    class="box__bath__middle__top__two__right__top__left__top__title"
+                  >
+                    <p>mode</p>
+                  </div>
+                  <div
+                    class="box__bath__middle__top__two__right__top__left__top__content"
+                  >
+                    <i class="fa-solid fa-snowflake"></i>
+                    <i class="fa-solid fa-tornado"></i
+                    ><i class="fa-solid fa-rotate"></i>
+                  </div>
+                </div>
+                <div
+                  class="box__bath__middle__top__two__right__top__left__bottom"
+                >
+                  <div
+                    class="box__bath__middle__top__two__right__top__left__bottom__left"
+                  >
+                    <div
+                      [class.active]="isOn"
+                      class="box__bath__middle__top__two__right__top__left__bottom__left__dot"
+                    ></div>
+                  </div>
+                  <div
+                    (click)="on()"
+                    class="box__bath__middle__top__two__right__top__left__bottom__right"
+                  >
+                    <p>on/off</p>
+                  </div>
+                </div>
+              </div>
+              <div class="box__bath__middle__top__two__right__top__right">
+                <div
+                  class="box__bath__middle__top__two__right__top__right__top"
+                >
+                  <div
+                    class="box__bath__middle__top__two__right__top__right__top__title"
+                  >
+                    <p>fan</p>
+                  </div>
+                  <div
+                    class="box__bath__middle__top__two__right__top__right__top__content"
+                  >
+                    <i (click)="smole()" class="fa-solid fa-fan"></i>
+                    <div
+                      class="box__bath__middle__top__two__right__top__right__top__content__brick"
+                    >
+                      <div
+                        [class.active]="
+                          isBrick === 1 || isBrick === 2 || isBrick === 3
+                        "
+                        class="box__bath__middle__top__two__right__top__right__top__content__brick__top"
+                      ></div>
+                      <div
+                        [class.active]="isBrick === 2 || isBrick === 3"
+                        class="box__bath__middle__top__two__right__top__right__top__content__brick__middle"
+                      ></div>
+                      <div
+                        [class.active]="isBrick === 3"
+                        class="box__bath__middle__top__two__right__top__right__top__content__brick__bottom"
+                      ></div>
+                    </div>
+                    <i (click)="big()" class="fa-solid fa-fan big"></i>
+                  </div>
+                </div>
+                <div
+                  class="box__bath__middle__top__two__right__top__right__bottom"
+                >
+                  <i class="fa-solid fa-arrow-down"></i>
+
+                  <i class="fa-regular fa-snowflake"></i>
+                </div>
+              </div>
+            </div>
+            <div  (click)="setMore2()"       class="box__bath__middle__top__two__right__bottom">
+              <div
+                class="box__bath__middle__top__two__right__bottom__left"
+              ></div>
+              <div class="box__bath__middle__top__two__right__bottom__right">
+                <button   >
+                  more  <i class="fa-sharp fa-solid fa-caret-down"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box__bath__middle__top__three">
+          <div class="box__bath__middle__top__three__top">
+            <div class="box__bath__middle__top__three__top__all">
+
+           <div> <img src="/assets/jalousie.png" alt="">  All blinds</div>
+
+
+            </div>
+          </div>
+          <div class="box__bath__middle__top__three__bottom">
+            <div class="box__bath__middle__top__three__bottom__left">
+              <p>drapes</p>
+            </div>
+            <div class="box__bath__middle__top__three__bottom__center">
+              <p>sheers</p>
+            </div>
+            <div class="box__bath__middle__top__three__bottom__right">
+              <p>blackouts</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box__bath__right">
+      <div class="box__bath__right__control">
+        <div class="box__bath__right__control__div">
+          <div (click)="pressureC('up')" class="box__bath__right__control__div__top">
+            <i class="fa-solid fa-angle-up"></i>
+          </div>
+          <div (click)="pressureC('down')" class="box__bath__right__control__div__bottom">
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+          <div class="box__bath__right__box">
+            <div class="box__bath__right__box__top">
+              <p>pressure</p>
+              <h3>{{pressure}}%</h3>
+            </div>
+            <div class="box__bath__right__box__middle">
+              <!-- <div class="box__bath__right__box__middle__control"></div> -->
+              <div [ngStyle]="{'height':pressure+ '%'}" class="box__bath__right__box__middle__water">
+
+              </div>
+
+            </div>
+            <div class="box__bath__right__box__bottom">
+              <div class="box__bath__right__box__bottom__pause">
+                   <div class="box__bath__right__box__bottom__pause__top">
+
+                    <i class="fa-solid fa-pause"></i>
+
+                   </div>
+                   <div class="box__bath__right__box__bottom__pause__bottom">
+                    <p>pause</p>
+                   </div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+     <app-sky    (check)="checkSky($event)" *ngIf="skyActive"></app-sky>
+    <app-apple-tv (check)="checkApple($event)"    *ngIf="appleActive"   ></app-apple-tv> -->
+    <!-- <router-outlet></router-outlet> -->
+<app-sky></app-sky>
+    <!-- <app-apple-tv></app-apple-tv> -->
+  </div>
+
+</div>
+
+

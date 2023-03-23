@@ -1,0 +1,20 @@
+<div (click)="dataCheck($event)" class="box__main__left__bottom__item">
+  <div
+    [attr.data-numbers]="data"
+    [class]="klasa"
+    class="box__main__left__bottom__item__items box__main__left__bottom__item__items--two"
+  >
+    <div
+      [attr.data-numbers]="data"
+      class="box__main__left__bottom__item__items--two__top"
+    >
+      <p [attr.data-numbers]="data">{{ number }}</p>
+    </div>
+    <div
+      [attr.data-numbers]="data"
+      class="box__main__left__bottom__item__items--two__bottom"
+    >
+      <p [attr.data-numbers]="data">{{ text }}</p>
+    </div>
+  </div>
+</div>

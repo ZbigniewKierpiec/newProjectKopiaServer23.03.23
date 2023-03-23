@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,OAAe;EACjC,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,CAAC;EACN,OAAO,EAAE,gHAAgH;EACzH,KAAK,EAAE,KAAK;CACb;;AAGD,AAAA,GAAG,CAAA;EACD,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,GAAG;CACtB",
+    "sources": [
+        "swiper.component.scss"
+    ],
+    "names": [],
+    "file": "swiper.component.css"
+}

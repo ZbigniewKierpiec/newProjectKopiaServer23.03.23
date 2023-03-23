@@ -1,0 +1,388 @@
+<div [ngClass]="active" class="box">
+  <div class="box__search">
+    <div class="box__search__top">
+      <div class="box__search__top__items box__search__top__items--first">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="box__search__top__items box__search__top__items--dots">
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+      <div class="box__search__top__items">
+        <i class="fa-solid fa-question"></i>
+      </div>
+      <div class="box__search__top__items">
+        <p>info</p>
+      </div>
+      <div class="box__search__top__items box__search__top__items--last">
+        <p>presets</p>
+      </div>
+    </div>
+  </div>
+  <div class="box__main">
+    <div class="box__main__left">
+      <div class="box__main__left__top">
+        <div class="box__main__left__top__item">
+          <ng-container *ngFor="let item of skyData | async">
+            <app-color-btn
+              [appColor]
+              [ngStyle]="{ background: item.color }"
+              [data]="item.data"
+              *ngFor="let item of item.DialColor"
+            ></app-color-btn>
+          </ng-container>
+
+          <!-- <div
+            class="box__main__left__top__item__items box__main__left__top__item__items--red"
+          ></div>
+          <div
+            class="box__main__left__top__item__items box__main__left__top__item__items--green"
+          ></div>
+          <div
+            class="box__main__left__top__item__items box__main__left__top__item__items--yellow"
+          ></div>
+          <div
+            class="box__main__left__top__item__items box__main__left__top__item__items--blue"
+          ></div> -->
+        </div>
+      </div>
+      <div class="box__main__left__bottom">
+        <div class="box__main__left__bottom__item">
+          <ng-container *ngFor="let item of skyData | async">
+            <app-sky-dial
+              [data]="item.data"
+              [klasa]="item.klasa"
+              [number]="item.number"
+              [text]="item.text"
+              *ngFor="let item of item.DialButtonsComponent"
+            ></app-sky-dial>
+          </ng-container>
+
+          <!-- <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--two"
+          >
+            <div class="box__main__left__bottom__item__items--two__top">
+              <p>1</p>
+            </div>
+            <div class="box__main__left__bottom__item__items--two__bottom">
+              <p></p>
+            </div>
+          </div>
+          <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--two"
+          >
+            <div class="box__main__left__bottom__item__items--two__top">
+              <p>2</p>
+            </div>
+            <div class="box__main__left__bottom__item__items--two__bottom">
+              <p>abc</p>
+            </div>
+          </div>
+
+          <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--two"
+          >
+            <div class="box__main__left__bottom__item__items--two__top">
+              <p>3</p>
+            </div>
+            <div class="box__main__left__bottom__item__items--two__bottom">
+              <p>def</p>
+            </div>
+          </div>
+
+          <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--two"
+          >
+            <div class="box__main__left__bottom__item__items--two__top">
+              <p>4</p>
+            </div>
+            <div class="box__main__left__bottom__item__items--two__bottom">
+              <p>ghi</p>
+            </div>
+          </div>
+
+          <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--two"
+          >
+            <div class="box__main__left__bottom__item__items--two__top">
+              <p>5</p>
+            </div>
+            <div class="box__main__left__bottom__item__items--two__bottom">
+              <p>jkl</p>
+            </div>
+          </div>
+
+          <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--two"
+          >
+            <div class="box__main__left__bottom__item__items--two__top">
+              <p>6</p>
+            </div>
+            <div class="box__main__left__bottom__item__items--two__bottom">
+              <p>mno</p>
+            </div>
+          </div>
+
+          <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--two"
+          >
+            <div class="box__main__left__bottom__item__items--two__top">
+              <p>7</p>
+            </div>
+            <div class="box__main__left__bottom__item__items--two__bottom">
+              <p>pqrs</p>
+            </div>
+          </div>
+
+          <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--two"
+          >
+            <div class="box__main__left__bottom__item__items--two__top">
+              <p>8</p>
+            </div>
+            <div class="box__main__left__bottom__item__items--two__bottom">
+              <p>tuv</p>
+            </div>
+          </div>
+
+          <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--two"
+          >
+            <div class="box__main__left__bottom__item__items--two__top">
+              <p>9</p>
+            </div>
+            <div class="box__main__left__bottom__item__items--two__bottom">
+              <p>wxyz</p>
+            </div>
+          </div>
+
+          <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--clear"
+          ></div>
+          <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--last"
+          >
+            0
+          </div>
+           <div
+            class="box__main__left__bottom__item__items box__main__left__bottom__item__items--clear"
+          ></div>
+        --></div>
+      </div>
+    </div>
+    <div class="box__main__right">
+      <div class="box__main__right__box">
+        <div
+          *ngFor="let item of skyData | async"
+          class="box__main__right__box__itemLeft"
+        >
+          <app-ch-up
+            [name]="item.name"
+            [icon]="item.icon"
+            [data]="item.data"
+            *ngFor="let item of item.dpadbuttonup"
+          ></app-ch-up>
+          <!-- <div class="box__main__right__box__itemLeft__box">
+            <span>ch</span><i class="fa-solid fa-caret-up"></i>
+          </div> -->
+        </div>
+        <div
+          (click)="dataHome($event)"
+          data-number="home"
+          class="box__main__right__box__itemRight"
+        >
+          <!-- <span>home</span> -->
+          <ng-container *ngFor="let item of skyData | async">
+            <app-home-btn
+              [data]="item.data"
+              [name]="item.name"
+              [icon]="item.icon"
+              *ngFor="let item of item.dpadbuttonhome"
+            ></app-home-btn>
+          </ng-container>
+        </div>
+        <!-- ------ -->
+
+        <div
+          data-numbers="top"
+          class="box__main__right__box__item box__main__right__box__item--top"
+        ></div>
+        <div
+          data-numbers="top"
+          class="box__main__right__box__item box__main__right__box__item--top"
+        ></div>
+        <div
+          (click)="dataMiddle($event)"
+          data-numbers="top"
+          class="box__main__right__box__item box__main__right__box__item--top"
+        >
+          <div
+            data-numbers="top"
+            class="box__main__right__box__item box__main__right__box__item--top__dot"
+          >
+            <div
+              data-numbers="top"
+              class="box__main__right__box__item--top__dot__item"
+            ></div>
+          </div>
+        </div>
+        <div
+          class="box__main__right__box__item box__main__right__box__item--middle"
+        ></div>
+        <div
+          class="box__main__right__box__item box__main__right__box__item--middle"
+        ></div>
+        <div
+          (click)="dataMiddle($event)"
+          class="box__main__right__box__item box__main__right__box__item--middle"
+        >
+          <div
+            data-numbers="left"
+            class="box__main__right__box__item box__main__right__box__item--middle__left"
+          >
+            <div
+              data-numbers="left"
+              class="box__main__right__box__item--middle__left__item"
+            ></div>
+          </div>
+          <div
+            class="box__main__right__box__item box__main__right__box__item--middle__ok"
+          >
+            <div data-numbers="ok">ok</div>
+          </div>
+
+          <div
+            data-numbers="right"
+            class="box__main__right__box__item box__main__right__box__item--middle__right"
+          >
+            <div
+              data-numbers="right"
+              class="box__main__right__box__item--middle__right__item"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          data-numbers="right"
+          class="box__main__right__box__item box__main__right__box__item--bottom"
+        ></div>
+        <div
+          data-numbers="right"
+          class="box__main__right__box__item box__main__right__box__item--bottom"
+        >
+          <div
+            (click)="dataMiddle($event)"
+            data-numbers="bottom"
+            class="box__main__right__box__item box__main__right__box__item--bottom__dot"
+          >
+            <div
+              data-numbers="bottom"
+              class="box__main__right__box__item--bottom__dot__item"
+            ></div>
+          </div>
+        </div>
+        <div
+          class="box__main__right__box__item box__main__right__box__item--bottom"
+        ></div>
+        <!-- -------- -->
+        <div
+          *ngFor="let item of skyData | async"
+          class="box__main__right__box__bottomLeft"
+        >
+          <app-ch-down
+            [name]="item.name"
+            [icon]="item.icon"
+            [data]="item.data"
+            *ngFor="let item of item.dpadbuttondown"
+          ></app-ch-down>
+          <!-- <div class="box__main__right__box__bottomLeft__box">
+            <span>ch</span><i class="fa-solid fa-caret-down"></i>
+          </div> -->
+        </div>
+        <ng-container *ngFor="let item of skyData | async">
+          <div
+            (click)="dataBackup($event)"
+            data-numbers="backup"
+            class="box__main__right__box__bottomRight"
+          >
+            <!-- <span>back up</span> -->
+            <app-back-up
+              [name]="item.name"
+              [icon]="item.icon"
+              [data]="item.data"
+              *ngFor="let item of item.dpadbackup"
+            ></app-back-up>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="box__main__bottom">
+      <div (click)="sky()" class="box__main__bottom__left">
+        <div class="box__main__bottom__left__item">
+          <i class="fa-solid fa-caret-left"></i>
+        </div>
+      </div>
+      <div class="box__main__bottom__middle">
+        <div class="box__main__bottom__middle__box">
+          <ng-container *ngFor="let item of skyData | async">
+            <div
+              (click)="checkData($event)"
+              [attr.data-numbers]="item.data"
+              *ngFor="let item of item.buttonsPlayComponent"
+              [classList]="item.klasa"
+              class="box__main__bottom__middle__box__item box__main__bottom__middle__box__item--first"
+            >
+              <i
+                [ngStyle]="{ color: item.color }"
+                [attr.data-numbers]="item.data"
+                class="{{ item.icon }}"
+              ></i>
+            </div>
+          </ng-container>
+
+          <!-- <div class="box__main__bottom__middle__box__item">
+            <i class="fa-solid fa-stop"></i>
+          </div>
+          <div class="box__main__bottom__middle__box__item">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <div class="box__main__bottom__middle__box__item">
+            <i class="fa-solid fa-pause"></i>
+          </div>
+          <div class="box__main__bottom__middle__box__item">
+            <div class="box__main__bottom__middle__box__item__record"></div>
+          </div>
+          <div
+            class="box__main__bottom__middle__box__item box__main__bottom__middle__box__item--last"
+          >
+            <i class="fa-solid fa-forward"></i>
+          </div> -->
+        </div>
+      </div>
+      <div class="box__main__bottom__right">
+        <div class="box__main__bottom__right__item">
+          <ng-container *ngFor="let item of skyData | async">
+            <app-reset
+              [data]="item.data"
+              [name1]="item.name1"
+              [name2]="item.name2"
+              [name3]="item.name3"
+              [icon]="item.icon"
+              *ngFor="let item of item.skyboxreset"
+            ></app-reset>
+          </ng-container>
+
+          <!-- <div class="box__main__bottom__right__item__items">
+            <div class="box__main__bottom__right__item__items__top">
+              <p>sky box</p>
+              <p>reset</p>
+            </div>
+            <div class="box__main__bottom__right__item__items__bottom">
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <p>hold for 2s</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

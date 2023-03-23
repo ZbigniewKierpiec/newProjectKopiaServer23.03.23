@@ -1,0 +1,539 @@
+.box {
+  width: 23%;
+  height: 100%;
+  background-color: #fcfdff;
+  border-left: 1px solid #b0b1b67c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 0.63fr 1fr 0.6fr 1.5fr;
+      grid-template-rows: 0.63fr 1fr 0.6fr 1.5fr;
+}
+
+.box__user {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.6fr;
+      grid-template-columns: 1fr 0.6fr;
+}
+
+.box__user__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.box__user__left__img {
+  width: 7rem;
+  height: 7rem;
+}
+
+.box__user__left__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+
+.box__user__left__title {
+  padding: 1rem 2rem;
+}
+
+.box__user__left__title button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 1.7rem;
+}
+
+.box__user__left__arrow i {
+  display: block;
+  font-size: 3rem;
+  color: black;
+}
+
+.box__user__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.box__user__right__arrow i {
+  display: block;
+  font-size: 3rem;
+  color: black;
+}
+
+.box__user__right__notyfications {
+  position: absolute;
+  right: 30%;
+  font-size: 4rem;
+  color: black;
+}
+
+.box__user__right__notyfications__message {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 6px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: white;
+  padding: 1rem;
+}
+
+.box__cctv {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box__cctv__camera {
+  position: absolute;
+  top: 0;
+  left: 4.5rem;
+  width: auto;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.box__cctv__camera__left p {
+  color: #93BFCF;
+  color: var(--right-box-color);
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.box__cctv__camera__right {
+  color: var(--right-box-color);
+}
+
+.box__cctv__tv {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.box__cctv__tv__cameraList {
+  position: absolute;
+  border-radius: 2rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+  -webkit-transition: all 0.7s linear;
+  transition: all 0.7s linear;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box__cctv__tv__cameraList__box {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: aliceblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.box__cctv__tv__cameraList__box__record {
+  color: red;
+}
+
+.box__cctv__tv__cameraList__box__record.active {
+  color: green;
+}
+
+.box__cctv__tv__cameraList__box button {
+  padding: 0.5rem 0.6rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.box__cctv__tv__cameraList__box.active {
+  background-color: gainsboro;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.box__cctv__tv__cameraList.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.box__cctv__tv__live {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 3rem;
+  background-color: white;
+  position: absolute;
+  top: 15px;
+  left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0.5rem;
+  visibility: hidden;
+}
+
+.box__cctv__tv__live.active {
+  visibility: visible;
+}
+
+.box__cctv__tv__live p {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.box__cctv__tv__live__dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: red;
+  border-radius: 50%;
+  -webkit-animation: dot 1.3s linear infinite;
+          animation: dot 1.3s linear infinite;
+}
+
+.box__cctv__tv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  -webkit-filter: contrast(70%);
+          filter: contrast(70%);
+}
+
+.box__cctv__users {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.6s linear;
+  transition: 0.6s linear;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.box__cctv__users.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.box__cctv__users__user {
+  margin: 0 auto;
+  width: 80%;
+  padding: 2rem 4rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box__cctv__users__user:hover {
+  background-color: aliceblue;
+  border-radius: 1rem;
+}
+
+.box__cctv__users__user__image {
+  width: 4rem;
+  height: 4rem;
+}
+
+.box__cctv__users__user__image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.box__cctv__users__user p {
+  font-size: 1.3rem;
+}
+
+.box__presets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box__presets__box {
+  width: 80%;
+  height: 80%;
+}
+
+.box__presets__box__main {
+  width: 30%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.box__presets__box__main__arrow {
+  color: var(--right-box-color);
+}
+
+.box__presets__box__main p {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--right-box-color);
+}
+
+.box__presets__box__boxesContainer {
+  width: 100%;
+  height: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 0.4rem;
+}
+
+.box__presets__box__boxesContainer__item {
+  margin: 1.7rem 0.4rem;
+  background-color: gainsboro;
+  border-radius: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  color: #656669;
+  cursor: pointer;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-box-shadow: 6px 2px 26px -4px rgba(0, 0, 0, 0.19);
+  box-shadow: 6px 2px 26px -4px rgba(0, 0, 0, 0.19);
+}
+
+.box__presets__box__boxesContainer__item.active {
+  background-color: #93bfcf;
+  color: white;
+}
+
+.box__rooms {
+  width: 80%;
+  height: 90%;
+  margin: 0 auto;
+}
+
+.box__rooms__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  height: 30px;
+  color: var(--right-box-color);
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box__rooms__arrow p {
+  text-transform: capitalize;
+  color: var(--right-box-color);
+  font-size: 1.5rem;
+}
+
+.box__rooms__box {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+}
+
+.box__rooms__box__list {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--right-box-color);
+  font-weight: bolder;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.box__rooms__box__list p {
+  cursor: pointer;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.box__rooms__box__list p:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  color: #656669;
+}
+
+.box__rooms__box__list i {
+  margin-left: 1.1rem;
+  margin-right: 3rem;
+  color: var(--right-box-color);
+}
+
+@-webkit-keyframes dot {
+  0% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: transparent;
+  }
+  45% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: red;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes dot {
+  0% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: transparent;
+  }
+  45% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: red;
+  }
+  100% {
+    background-color: red;
+  }
+}
+/*# sourceMappingURL=users-right.component.css.map */

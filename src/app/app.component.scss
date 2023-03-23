@@ -1,0 +1,51 @@
+@import "animate.css";
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(222, 225, 230, 255);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  overflow: hidden !important;
+  position: relative !important;
+  width: 90%;
+  height: 90vh;
+  background-color: rgba(250, 251, 255, 255);
+  background-color: gainsboro;
+  position: relative;
+  &__temperature-list {
+    width: 300px;
+    transform: translateY(-100%);
+    background-color: #c0bad1;
+    list-style-type: none;
+    position: absolute;
+    top: 17%;
+    left: 9%;
+    transition: 0.7s linear;
+    z-index: 77777;
+    cursor: pointer;
+    &.active {
+      transform: translateY(0px);
+    }
+    // &__items {
+    //   text-align: center;
+    //   color: black;
+    //   font-size: 2.4rem;
+    //   padding: 0.7rem 1rem;
+    //   background-color: white;
+    //   border-top: 1px solid lightgray;
+    //   text-transform: capitalize;
+    //   &.active {
+    //     background-color: black;
+    //     color: white;
+    //   }
+    //   &:hover {
+    //     background-color: black;
+    //     color: white;
+    //   }
+    // }
+   }
+}

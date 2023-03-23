@@ -1,0 +1,56 @@
+<div class="box">
+
+
+  <div class="box__input">
+    <label for="input">Please log in</label>
+    <div class="box__input__box">
+      <input  [(ngModel)]="username" type="text" placeholder="name">
+      <input [(ngModel)]="password" type="password" >
+      <button [class.active]="!username || !password" [disabled]="!username || !password" (click)="log()"  >Log on</button>
+    </div>
+
+  </div>
+  <nav>
+
+    <li
+
+      [class.active]="isActive === item.name"
+      (click)="checkUser(item)"
+      *ngFor="let item of use | async"
+    >
+
+
+      {{ item.name }}
+    </li>
+  </nav>
+
+  <div *ngFor="let item of usersActive | async" class="users">
+
+
+
+    <li>Id:{{ item.id }}</li>
+    <li>Name:{{ item.name }}</li>
+    <li>Age:{{ item.age }}</li>
+
+    <div class="users__image">
+      <img src="{{ item.image }}" alt="" />
+    </div>
+  </div>
+  <h1>Devices</h1>
+  <div *ngFor="let item of usersActive | async" class="devices">
+    <div
+      [classList]="
+        isActive ? 'animate__animated animate__slideInUp devices__box' : ''
+      "
+      *ngFor="let item of item.devices"
+      class="devices__box"
+    >
+      <li>{{ item.device }}</li>
+      <li>{{ item.status }}</li>
+
+      <div class="devices__box__image">
+        <img src="{{ item.icon }}" alt="" />
+      </div>
+    </div>
+  </div>
+</div>

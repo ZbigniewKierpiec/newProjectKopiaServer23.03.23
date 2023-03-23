@@ -1,0 +1,38 @@
+.box {
+  width: 68%;
+  height: 53%;
+  position: absolute;
+  left: 9%;
+  bottom: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.box__tv {
+  width: 80%;
+  height: 80%;
+  background-color: cadetblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.box__tv h1 {
+  font-size: 24rem;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=tv.component.css.map */

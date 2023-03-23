@@ -1,0 +1,49 @@
+
+.box {
+  z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+  width: 100%;
+  height: 100%;
+  background-color: lightcyan;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+
+  &__item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 50%;
+    height: 80%;
+    border-radius: 4rem;
+    background-color: lightgreen;
+    color: white;
+    display: flex;
+   flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &__image {
+      width: 50%;
+      height: 50%;
+
+      img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__logo {
+      background-color: black;
+      min-width: 30%;
+      padding: 0 1rem;
+      border-radius: 1rem;
+      h1{
+        font-family: monospace;
+        text-align: center;
+        text-transform: capitalize;
+
+      }
+    }
+  }
+}

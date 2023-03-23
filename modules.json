@@ -1,0 +1,265 @@
+
+{
+  "Modules": [
+    {
+      "Elements": [
+        {
+          "Id": 1,
+          "Label": "Netflix",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "",
+          "StepSize": 0,
+          "Icon": "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+          "Type": 1
+        },
+        {
+          "Id": 2,
+          "Label": "Amazon",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "",
+          "StepSize": 0,
+          "Icon": "https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg",
+          "Type": 1
+        },
+        {
+          "Id": 3,
+          "Label": "Disney+",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "",
+          "StepSize": 0,
+          "Icon": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg",
+          "Type": 1
+        },
+        {
+          "Id": 4,
+          "Label": "Youtube",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "",
+          "StepSize": 0,
+          "Icon": "https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg",
+          "Type": 1
+        }
+      ],
+      "Id": 1,
+      "Type": 6
+    },
+    {
+      "Elements": [
+        {
+          "Id": 1,
+          "Label": "Main",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": null,
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 2
+        },
+        {
+          "Id": 2,
+          "Label": "Bedroom",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": null,
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 2
+        },
+        {
+          "Id": 3,
+          "Label": "Bathroom",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": null,
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 2
+        },
+        {
+          "Id": 4,
+          "Label": "Climate Control",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": null,
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 2
+        },
+        {
+          "Id": 5,
+          "Label": "Study",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": null,
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 2
+        }
+      ],
+      "Id": 2,
+      "Type": 2
+    },
+    {
+      "Elements": [
+        {
+          "Id": 1,
+          "Label": "1",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "abc",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 2,
+          "Label": "2",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "def",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 3,
+          "Label": "3",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "ghi",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 4,
+          "Label": "4",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "jkl",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 5,
+          "Label": "5",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "mno",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 6,
+          "Label": "6",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "pqr",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 7,
+          "Label": "7",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "stu",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 8,
+          "Label": "8",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "vqx",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 9,
+          "Label": "9",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "yz.?",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 10,
+          "Label": "0",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "-",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 11,
+          "Label": "#",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": "-_",
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 12,
+          "Label": "Clear",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": null,
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 13,
+          "Label": "Delete",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": null,
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 14,
+          "Label": "Enter",
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": null,
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 1
+        },
+        {
+          "Id": 15,
+          "Label": null,
+          "Maximum": 0,
+          "Minimum": 0,
+          "SecondaryLabel": null,
+          "StepSize": 0,
+          "Icon": null,
+          "Type": 5
+        }
+      ],
+      "Id": 7,
+      "Type": 5
+    }
+  ],
+  "CurrentViewId": "main",
+  "MessageType": 1
+}

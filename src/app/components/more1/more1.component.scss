@@ -1,0 +1,102 @@
+.box {
+  position: absolute !important;
+  padding: 5rem;
+  top: 50%;
+  z-index: 7;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+
+
+  background: #ECECF1;
+  // background: -webkit-linear-gradient(top, #95959c, #5C5B61);
+  // background: -moz-linear-gradient(top, #9e9ea3, #5C5B61);
+  background: linear-gradient(to bottom, #868688, #35343b);
+
+ transition: all 0.4s linear;
+
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__items {
+    width: 60%;
+    height: 90%;
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 1fr;
+
+    &__left {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        width: 100%;
+        height: 6rem;
+       
+        color: white;
+        display: grid;
+        place-content: center;
+        font-size: 4rem;
+        cursor: pointer;
+      }
+    }
+    &__right {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__item{
+        width: 40%;
+        height: 100%;
+
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(8, 1fr);
+        grid-row-gap: 0.7rem;
+        &__name{
+
+          border-radius: 1rem;
+          cursor: pointer;
+          background-color:#C9C3C3;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-transform: uppercase;
+          &.invisible{visibility: hidden;}
+          &--bottom{
+           background-color:transparent;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        grid-gap: 0.7rem;
+        font-size: 3rem;
+        color: white;
+
+            &__left{
+              height: 100%;
+              background-color:#C9C3C3;
+              display: grid;
+              place-content: center;
+              border-radius: 1rem;
+            }
+            &__right{
+              height: 100%;
+              background-color:#C9C3C3;
+              display: grid;
+              place-content: center;
+              border-radius: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

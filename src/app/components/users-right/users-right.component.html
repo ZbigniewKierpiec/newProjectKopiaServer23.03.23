@@ -1,0 +1,127 @@
+<div class="box">
+  <div class="box__user">
+    <div (click)="user()" class="box__user__left">
+      <div class="box__user__left__img">
+        <img src="{{ userImage }}" alt="" />
+      </div>
+      <div class="box__user__left__title">
+        <button>{{ userName }}</button>
+      </div>
+      <div class="box__user__left__arrow">
+        <ng-container *ngIf="!isActive; else elseTemplate">
+          <i class="fa-solid fa-caret-left"></i>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <i class="fa-solid fa-caret-right"></i>
+        </ng-template>
+      </div>
+    </div>
+    <div class="box__user__right">
+      <div class="box__user__right__notyfications">
+        <div class="box__user__right__notyfications__message">
+          <p>3</p>
+        </div>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+    </div>
+  </div>
+  <div class="box__cctv">
+    <div (click)="camera()" class="box__cctv__camera">
+      <div class="box__cctv__camera__left">
+        <p>{{ cameraName }}</p>
+      </div>
+      <div class="box__cctv__camera__right">
+        <ng-container *ngIf="!cameraT; else elseTemplateC">
+          <i class="fa-sharp fa-solid fa-caret-down"></i>
+        </ng-container>
+        <ng-template #elseTemplateC>
+          <i class="fa-sharp fa-solid fa-caret-up"></i>
+        </ng-template>
+      </div>
+    </div>
+    <div class="box__cctv__tv">
+      <div [class.active]="cameraT" class="box__cctv__tv__cameraList">
+        <div
+          [classList]="
+            isSelected === item.name
+              ? 'box__cctv__tv__cameraList__box active   animate__animated animate__headShake       '
+              : 'box__cctv__tv__cameraList__box'
+          "
+          (click)="cameraC(item)"
+          *ngFor="let item of cameras"
+          class="box__cctv__tv__cameraList__box"
+        >
+          <button
+            (click)="startRecord(item)"
+            [class.active]="item.active"
+            class="box__cctv__tv__cameraList__box__record"
+          >
+            <i class="fa-solid fa-video"></i>
+          </button>
+          <p>{{ item.name }}</p>
+          <button
+            (click)="stopRecording(item)"
+            class="box__cctv__tv__cameraList__box__stop"
+          >
+            <i class="fa-solid fa-stop"></i>
+          </button>
+        </div>
+      </div>
+      <img src="{{ cameraImage }}" alt="" />
+      <div [class.active]="dotActive" class="box__cctv__tv__live">
+        <div class="box__cctv__tv__live__dot"></div>
+        <p>Live</p>
+      </div>
+    </div>
+    <div [class.active]="isActive" class="box__cctv__users">
+      <div
+        (click)="userChange(item)"
+        *ngFor="let item of  uzytkownicy | async "
+        class="box__cctv__users__user"
+      >
+        <div class="box__cctv__users__user__image">
+          <img src="{{item.image}}" alt="" />
+        </div>
+        <p>{{ item.name }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="box__presets">
+    <div class="box__presets__box">
+      <div class="box__presets__box__main">
+        <p>presets</p>
+        <div class="box__presets__box__main__arrow">
+          <i class="fa-sharp fa-solid fa-caret-up"></i>
+        </div>
+      </div>
+
+      <div class="box__presets__box__boxesContainer">
+        <div
+          (click)="presetsClick(item)"
+          [class.active]="isSelectedPresets === item.name"
+          *ngFor="let item of presets"
+          class="box__presets__box__boxesContainer__item"
+        >
+          <i class="{{ item.icon }}"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box__rooms">
+    <div class="box__rooms__arrow">
+      <p>rooms</p>
+      <i class="fa-sharp fa-solid fa-caret-up"></i>
+    </div>
+<div  class="box__rooms__box">
+  <div *ngFor="let item of rooms"  class="box__rooms__box__list">
+    <i class="fa-solid fa-table-cells-large"></i>
+    <p>{{item.name}}</p>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>

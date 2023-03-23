@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "animate.css";
+@import "/src/app/sass/abstracts/functions";
+@import "src/app/sass/abstracts/mixins";
+@import "/src/app/sass/base/animations";
+@import "/src/app/sass/base/base";
+@import "/src/app/sass/base/typography";
+@import "/src/app/sass/base/utilities";
+@import "~swiper/swiper-bundle";
+* {
+  font-family: monospace;
+  -webkit-tap-highlight-color: transparent;
+  backface-visibility: hidden;
+}

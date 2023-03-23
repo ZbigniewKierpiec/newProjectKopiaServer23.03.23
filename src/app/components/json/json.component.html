@@ -1,0 +1,60 @@
+<div class="box">
+  <nav>
+    <li
+      [class.active]="true"
+      (click)="checkUser(item)"
+      *ngFor="let item of use | async"
+    >
+      {{ item.name }}
+    </li>
+  </nav>
+
+  <div class="box__drop">
+    <label for="drop">Please select room</label>
+    <ng-container *ngFor="let item of usersActive | async">
+      <select
+        (change)="selectOptions(item)"
+        [(ngModel)]="select"
+        name="drop"
+        id="drop"
+      >
+        <ng-container *ngFor="let item of usersActive | async">
+          <ng-container *ngFor="let item of item.rooms">
+            <option value="{{ item.id }}">{{ item.name }}</option>
+          </ng-container>
+        </ng-container>
+      </select>
+    </ng-container>
+  </div>
+
+
+  <div  class="users" >
+    <li>Id:</li>
+    <li>Name:</li>
+    <li>Age:</li>
+
+    <div class="users__image">
+      <img src="" alt="" />
+    </div>
+  </div>
+
+
+
+  <div class="devices">
+    <h1 class="devices__h1">Devices</h1>
+ <ng-container    >
+<ng-container   >
+
+  <div class="devices__box"        >
+    <li></li>
+
+    <div class="devices__box__image">
+      <img src="" alt="" />
+    </div>
+  </div>
+</ng-container>
+
+ </ng-container>
+
+  </div>
+</div>

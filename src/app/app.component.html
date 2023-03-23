@@ -1,0 +1,61 @@
+<div class="home">
+  <div class="box">
+    <div class="temp"></div>
+    <app-temperature-top
+      [active]="active"
+      [room]="room"
+      (start)="dropDown($event)"
+    ></app-temperature-top>
+    <app-power></app-power>
+    <app-users-right></app-users-right>
+
+    <div [class.active]="active" class="box__temperature-list">
+      <!-- <li
+        [class.active]="isSelected === item"
+        (click)="check(item)"
+        *ngFor="let item of items"
+        class="box__temperature-list__items"
+      >
+        {{ item.label }}
+      </li> -->
+      <app-room-list
+        [text]="item.label"
+        [isActive]="isSelected === item"
+        *ngFor="let item of items"
+        (sprawdz)="sprawdz(item)"
+      ></app-room-list>
+    </div>
+<!--
+    <app-tv
+      [active]="
+        panelSelected === 'tv' ? 'animate__animated animate__fadeInDown' : ''
+      "
+      *ngIf="panelSelected == 'tv'"
+    ></app-tv> -->
+
+<!--
+
+     <app-sky
+      [active]="
+        panelSelected === 'sky tv'
+          ? 'animate__animated animate__backInDown'
+          : ''
+      "
+      *ngIf="panelSelected == 'sky tv'"
+    ></app-sky> -->
+    <!-- <app-sky></app-sky> -->
+    <app-bathroom
+      [skyactive]="panelSelected"
+      [active]="
+        room == 'bathroom' ? 'animate__animated animate__fadeInDown' : ''
+      "
+      *ngIf="room === 'bathroom'"
+    ></app-bathroom>
+    <app-bathroom></app-bathroom>
+
+    <!-- <app-json3></app-json3> -->
+
+    <app-devices (send)="panel($event)"></app-devices>
+  </div>
+</div>
+

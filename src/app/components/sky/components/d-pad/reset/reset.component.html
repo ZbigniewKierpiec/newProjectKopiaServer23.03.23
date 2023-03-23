@@ -1,0 +1,20 @@
+<div
+  (click)="dataReset($event)"
+  [attr.data-numbers]="data"
+  class="box__main__bottom__right__item"
+>
+  <div
+    [attr.data-numbers]="data"
+    class="box__main__bottom__right__item__items__top"
+  >
+    <p [attr.data-numbers]="data">{{ name1 }}</p>
+    <p [attr.data-numbers]="data">{{ name2 }}</p>
+  </div>
+  <div
+    [attr.data-numbers]="data"
+    class="box__main__bottom__right__item__items__bottom"
+  >
+    <i [attr.data-numbers]="data" class="{{ icon }}"></i>
+    <p [attr.data-numbers]="data">{{ name3 }}</p>
+  </div>
+</div>

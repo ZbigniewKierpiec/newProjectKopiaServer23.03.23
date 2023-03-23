@@ -1,0 +1,171 @@
+{
+  "SKY": [
+    {
+      "id": 1,
+      "name": "SKY TV",
+      "status": false,
+      "icon": " /assets/Sky-Logo-1984.png",
+      "DialColor": [
+        {
+          "data": "red",
+          "name": "red",
+          "color": "red",
+          "radius": 0.7
+        },
+        {
+          "data": "green",
+          "name": "green",
+          "color": "green",
+          "radius": 0.7
+        },
+        {
+          "data": "yellow",
+          "name": "yellow",
+          "color": "yellow",
+          "radius": 0.7
+        },
+        {
+          "data": "blue",
+          "name": "blue",
+          "color": "blue",
+          "radius": 0.7
+        }
+      ],
+      "DialButtonsComponent": [
+        {
+          "data": "button 1",
+          "number": 1,
+          "text": ""
+        },
+        {
+          "data": "button 2 abc",
+          "number": 2,
+          "text": "abc"
+        },
+        {
+          "data": "button 3 def",
+          "number": 3,
+          "text": "def"
+        },
+        {
+          "data": "button 4 ghi",
+          "number": 4,
+          "text": "ghi"
+        },
+        {
+          "data": "button 5 jkl",
+          "number": 5,
+          "text": "jkl"
+        },
+        {
+          "data": "button 6 mno",
+          "number": 6,
+          "text": "mno"
+        },
+        {
+          "data": "button 7 pqrs",
+          "number": 7,
+          "text": "pqrs"
+        },
+        {
+          "data": "button 8 tuy",
+          "number": 8,
+          "text": "tuy"
+        },
+        {
+          "data": "button 9 wzyz",
+          "number": 9,
+          "text": "wxyz"
+        },
+        {
+          "data": "button 0",
+          "number": 0,
+          "text": "",
+          "klasa": "clear"
+        },
+
+        {
+          "data": "button 0",
+          "number": 0,
+          "text": ""
+        },
+
+        {
+          "number": 0,
+          "text": "",
+          "klasa": "clear"
+        }
+      ],
+      "buttonsPlayComponent": [
+        {
+          "data": "backward",
+          "icon": "fa-solid fa-backward",
+          "klasa": "box__main__bottom__middle__box__item box__main__bottom__middle__box__item--first"
+        },
+        {
+          "data": "stop",
+          "icon": "fa-solid fa-stop",
+          "klasa": "box__main__bottom__middle__box__item"
+        },
+        {
+          "data": "play",
+          "icon": "fa-solid fa-play",
+          "klasa": "box__main__bottom__middle__box__item"
+        },
+        {
+          "data": "pause",
+          "icon": "fa-solid fa-pause",
+          "klasa": "box__main__bottom__middle__box__item"
+        },
+        {
+          "data": "record",
+          "icon": "fa-solid fa-record-vinyl",
+          "klasa": "box__main__bottom__middle__box__item",
+          "color": "red"
+        },
+        {
+          "data": "forward",
+          "icon": "fa-solid fa-forward",
+          "klasa": "box__main__bottom__middle__box__item box__main__bottom__middle__box__item--last"
+        }
+      ],
+      "dpadbuttonup": [
+        {
+          "name": "ch",
+          "icon": "fa-solid fa-caret-up",
+          "data": "up"
+        }
+      ],
+      "dpadbuttondown": [
+        {
+          "name": "ch",
+          "icon": "fa-solid fa-caret-down",
+          "data": "down"
+        }
+      ],
+      "dpadbuttonhome": [
+        {
+          "name": "home",
+          "icon": "",
+          "data": "home"
+        }
+      ],
+      "dpadbackup": [
+        {
+          "name": "back up",
+          "icon": "",
+          "data": "back up"
+        }
+      ],
+      "skyboxreset": [
+        {
+          "name1": "sky box",
+          "name2": "reset",
+          "name3": "hold for 2s",
+          "icon": "fa-solid fa-arrows-rotate",
+          "data": "sky box reset"
+        }
+      ]
+    }
+  ]
+}

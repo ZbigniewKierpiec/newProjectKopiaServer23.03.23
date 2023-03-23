@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACE,AAAA,MAAM,CAAC;EACL,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,MAAM;EACjB,OAAO,EAAE,WAAW;EACpB,gBAAgB,EAAE,KAAK;EACvB,UAAU,EAAE,mBAAmB;EAC/B,cAAc,EAAE,UAAU;CAS3B;;AAhBD,AAQE,MARI,AAQH,OAAO,CAAC;EACP,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,KAAK;CACb;;AAXH,AAYE,MAZI,AAYH,MAAM,CAAC;EACN,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "room-list.component.scss"
+    ],
+    "names": [],
+    "file": "room-list.component.css"
+}

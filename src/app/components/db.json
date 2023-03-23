@@ -1,0 +1,90 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "George",
+      "age": 34,
+      "image": "assets/user.jpeg ",
+      "username": "zee",
+      "password": "123",
+      "rooms": [
+        {
+          "id": 1,
+          "room": "living room"
+        },
+        {
+          "id": 2,
+          "room": "study"
+        },
+        {
+          "id": 3,
+          "room": "kitchen"
+        },
+
+        {
+          "id": 3,
+          "room": "kitchen"
+        }
+
+
+      ],
+      "devices": [
+        {
+          "id": 1,
+          "room": "living room",
+          "device": "apple tv",
+          "status": "false",
+          "icon": "/assets/png-apple-logo-9708.png  "
+        },
+
+        {
+          "id": 1,
+          "room": "living room",
+          "device": "tv",
+          "status": "false",
+          "icon": "/assets/television-png-tv-29.png "
+        },
+
+        {
+          "id": 2,
+          "room": "study",
+          "device": "apple tv",
+          "status": "false",
+          "icon": "/assets/png-apple-logo-9708.png  "
+        },
+
+        {
+          "id": 2,
+          "room": "study",
+          "device": "tv",
+          "status": "false",
+          "icon": "/assets/television-png-tv-29.png "
+        },
+
+        {
+          "id": 2,
+          "room": "study",
+          "device": "playstation",
+          "status": "false",
+          "icon": " /assets/navy-playstation-png-logo-5.png"
+        },
+
+        {
+          "id": 3,
+          "room": "kitchen",
+          "device": "apple tv",
+          "status": "false",
+          "icon": "/assets/png-apple-logo-9708.png  "
+        },
+
+        {
+          "id": 3,
+          "room": "kitchen",
+          "device": "tv",
+          "status": "false",
+          "icon": "/assets/television-png-tv-29.png "
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+
+  .items {
+    text-align: center;
+    color: black;
+    font-size: 2.4rem;
+    padding: 0.7rem 1rem;
+    background-color: white;
+    border-top: 1px solid lightgray;
+    text-transform: capitalize;
+    &.active {
+      background-color: black;
+      color: white;
+    }
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+

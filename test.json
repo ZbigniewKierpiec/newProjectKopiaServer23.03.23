@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "George",
+      "age": 34,
+      "image": "assets/user.jpeg ",
+      "username": "zee",
+      "password": "kierpiec",
+      "devices": [
+        {
+          "device": "apple tv",
+          "status": "false",
+          "icon": " /assets/png-apple-logo-9708.png  "
+        },
+
+        {
+          "device": "tv",
+          "status": "false",
+          "icon": "/assets/television-png-tv-29.png "
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "name": "leo",
+      "age": 24,
+      "image": "assets/user2.jpeg",
+      "username": "leo",
+      "password": "",
+      "devices": [
+        {
+          "device": "sky tv",
+          "status": "false",
+          "icon": "/assets/Sky-Logo-1984.png"
+        },
+
+        {
+          "device": "tv",
+          "status": "false",
+          "icon": "  /assets/television-png-tv-29.png  "
+        },
+        {
+          "device": "apple tv",
+          "status": "false",
+          "icon": "/assets/png-apple-logo-9708.png "
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "name": "theo",
+      "age": 54,
+      "image": "assets/user3.jpeg",
+      "username": "theo",
+      "password": "",
+      "devices": [
+        {
+          "device": "tv",
+          "status": "false",
+          "icon": " /assets/television-png-tv-29.png "
+        }
+      ]
+    }
+  ]
+}

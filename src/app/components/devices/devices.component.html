@@ -1,0 +1,155 @@
+<!--
+
+<div class="box">
+  <div class="box__devices">
+    <p>devices</p>
+
+          <div class="box__devices__items">
+            <div
+              (click)="deviceActive(item)"
+              [classList]="
+                activeDevice === item.name
+                  ? 'box__devices__items__item active'
+                  : 'box__devices__items__item'
+              "
+              *ngFor="let item of devices"
+              class="box__devices__items__item"
+            >
+              <div class="box__devices__items__item__top">
+                <div class="box__devices__items__item__top__left">
+                  <img [src]="item.icon" alt="" />
+                </div>
+                <div class="box__devices__items__item__top__right">
+                  <button class="box__devices__items__item__top__right__btn">
+                    <input
+                      (change)="checked(item)"
+                      [checked]="item.status"
+                      type="checkbox"
+                      id="{{ item.name }}"
+                    /><label for="{{ item.name }}">Toggle</label>
+                  </button>
+                </div>
+              </div>
+              <div></div>
+              <div class="box__devices__items__item__bottom">
+                <p class="box__devices__items__item__bottom__info">
+                  {{ item.name }}
+                </p>
+                <p
+                  class="box__devices__items__item__bottom__status"
+                  [textContent]="item.status ? 'on' : 'off'"
+                >
+                  status
+                </p>
+              </div>
+            </div>
+          </div>
+
+  </div>
+</div> -->
+<!--
+<div class="box">
+  <div class="box__devices">
+    <p>devices</p>
+
+    <swiper [config]="config">
+      <ng-container *ngFor="let item of devices">
+        <ng-template swiperSlide>
+          <div class="box__devices__items">
+            <div
+              (click)="deviceActive(item)"
+              [classList]="
+                activeDevice === item.name
+                  ? 'box__devices__items__item active'
+                  : 'box__devices__items__item'
+              "
+              *ngFor="let item of devices"
+              class="box__devices__items__item"
+            >
+              <div class="box__devices__items__item__top">
+                <div class="box__devices__items__item__top__left">
+                  <img [src]="item.icon" alt="" />
+                </div>
+                <div class="box__devices__items__item__top__right">
+                  <button class="box__devices__items__item__top__right__btn">
+                    <input
+                      (change)="checked(item)"
+                      [checked]="item.status"
+                      type="checkbox"
+                      id="{{ item.name }}"
+                    /><label for="{{ item.name }}">Toggle</label>
+                  </button>
+                </div>
+              </div>
+              <div></div>
+              <div class="box__devices__items__item__bottom">
+                <p class="box__devices__items__item__bottom__info">
+                  {{ item.name }}
+                </p>
+                <p
+                  class="box__devices__items__item__bottom__status"
+                  [textContent]="item.status ? 'on' : 'off'"
+                >
+                  status
+                </p>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </swiper>
+  </div>
+</div> -->
+
+<div class="box">
+  <div class="box__devices">
+    <p>devices</p>
+     <p></p>
+    <swiper [config]="config">
+      <ng-container *ngFor="let item of devices "   >
+        <ng-template swiperSlide>
+          <div        class="box__devices__items"     >
+            <div
+              (click)="deviceActive(item)"
+
+              [classList]="
+                activeDevice === item.name
+                  ? 'box__devices__items__item active'
+                  : 'box__devices__items__item'
+              "
+              class="box__devices__items__item"
+            >
+              <div class="box__devices__items__item__top">
+                <div class="box__devices__items__item__top__left">
+                  <img [src]="item.icon" alt="" />
+                </div>
+                <div class="box__devices__items__item__top__right">
+                  <button class="box__devices__items__item__top__right__btn">
+                    <input
+                      (change)="checked(item)"
+                      [checked]="item.status"
+                      type="checkbox"
+                      id="{{ item.name }}"
+                    /><label for="{{ item.name }}">Toggle</label>
+                  </button>
+                </div>
+              </div>
+              <div></div>
+              <div class="box__devices__items__item__bottom">
+                <p class="box__devices__items__item__bottom__info">
+                  {{ item.name }}
+                </p>
+                <p
+                  class="box__devices__items__item__bottom__status"
+                  [textContent]="item.status ? 'on' : 'off'"
+                >
+                  status
+                </p>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </swiper>
+  </div>
+</div>
