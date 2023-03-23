@@ -33,6 +33,7 @@ import { ChDownComponent } from './components/sky/components/d-pad/ch-down/ch-do
 import { HomeBtnComponent } from './components/sky/components/d-pad/home-btn/home-btn.component';
 import { BackUpComponent } from './components/sky/components/d-pad/back-up/back-up.component';
 import { ResetComponent } from './components/sky/components/d-pad/reset/reset.component';
+import { SearchComponent } from './components/sky/components/search/search.component';
 
 
 
@@ -74,6 +75,7 @@ const appRoute: Routes = [
     HomeBtnComponent,
     BackUpComponent,
     ResetComponent,
+    SearchComponent,
 
 
 

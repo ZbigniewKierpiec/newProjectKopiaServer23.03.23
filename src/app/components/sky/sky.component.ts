@@ -42,6 +42,11 @@ export class SkyComponent implements OnInit {
   dataMiddle(e) {
     console.log(e.target.dataset.numbers);
   }
+
+  searchesData(e) {
+    console.log(e.target.dataset.numbers);
+  }
+
   ngOnInit(): void {
     this.skyData = this.skyServices.getSky();
   }

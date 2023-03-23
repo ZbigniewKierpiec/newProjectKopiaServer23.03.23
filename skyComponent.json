@@ -165,6 +165,38 @@
           "icon": "fa-solid fa-arrows-rotate",
           "data": "sky box reset"
         }
+      ],
+      "searchcomponent": [
+        {
+          "name": "",
+          "icon": "fa-solid fa-magnifying-glass",
+          "klasa": "box__search__top__items box__search__top__items--first",
+          "data": "magnifying glass"
+        },
+        {
+          "name": "",
+          "icon": "fa-solid fa-ellipsis",
+          "klasa": "box__search__top__items box__search__top__items--dots",
+          "data": "ellipsis"
+        },
+        {
+          "name": "",
+          "icon": "fa-solid fa-question",
+          "klasa": "box__search__top__items",
+          "data": "question"
+        },
+        {
+          "name": "info",
+          "icon": "",
+          "klasa": "box__search__top__items",
+          "data": "info"
+        },
+        {
+          "name": "presets",
+          "icon": "",
+          "klasa": "box__search__top__items box__search__top__items--last",
+          "data": "presets"
+        }
       ]
     }
   ]

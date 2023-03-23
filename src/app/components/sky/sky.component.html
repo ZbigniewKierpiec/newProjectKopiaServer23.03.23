@@ -1,10 +1,17 @@
 <div [ngClass]="active" class="box">
   <div class="box__search">
-    <div class="box__search__top">
-      <div class="box__search__top__items box__search__top__items--first">
-        <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="box__search__top" *ngFor="let item of skyData | async">
+      <div
+        (click)="searchesData($event)"
+        [attr.data-numbers]="item.data"
+        *ngFor="let item of item.searchcomponent"
+        [classList]="item.klasa"
+        class="box__search__top__items box__search__top__items--first"
+      >
+        <i [attr.data-numbers]="item.data" class="{{ item.icon }}"></i>
+        <p [attr.data-numbers]="item.data">{{ item.name }}</p>
       </div>
-      <div class="box__search__top__items box__search__top__items--dots">
+      <!-- <div class="box__search__top__items box__search__top__items--dots">
         <i class="fa-solid fa-ellipsis"></i>
       </div>
       <div class="box__search__top__items">
@@ -15,7 +22,7 @@
       </div>
       <div class="box__search__top__items box__search__top__items--last">
         <p>presets</p>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="box__main">
@@ -186,28 +193,16 @@
           </div> -->
         </div>
 
-
-
-
         <!-- <div class="box__main__right__box__itemRight">  </div> -->
-          <!-- <span>home</span> -->
-          <ng-container *ngFor="let item of skyData | async">
-            <app-home-btn
-              [data]="item.data"
-              [name]="item.name"
-              [icon]="item.icon"
-              *ngFor="let item of item.dpadbuttonhome"
-            ></app-home-btn>
-          </ng-container>
-
-
-
-
-
-
-
-
-
+        <!-- <span>home</span> -->
+        <ng-container *ngFor="let item of skyData | async">
+          <app-home-btn
+            [data]="item.data"
+            [name]="item.name"
+            [icon]="item.icon"
+            *ngFor="let item of item.dpadbuttonhome"
+          ></app-home-btn>
+        </ng-container>
 
         <!-- ------ -->
 
@@ -308,15 +303,13 @@
           </div> -->
         </div>
         <ng-container *ngFor="let item of skyData | async">
-
-            <!-- <span>back up</span> -->
-            <app-back-up
-              [name]="item.name"
-              [icon]="item.icon"
-              [data]="item.data"
-              *ngFor="let item of item.dpadbackup"
-            ></app-back-up>
-
+          <!-- <span>back up</span> -->
+          <app-back-up
+            [name]="item.name"
+            [icon]="item.icon"
+            [data]="item.data"
+            *ngFor="let item of item.dpadbackup"
+          ></app-back-up>
         </ng-container>
       </div>
     </div>
@@ -365,18 +358,18 @@
       </div>
       <div class="box__main__bottom__right">
         <!-- <div class="box__main__bottom__right__item">   </div> -->
-          <ng-container *ngFor="let item of skyData | async">
-            <app-reset
-              [data]="item.data"
-              [name1]="item.name1"
-              [name2]="item.name2"
-              [name3]="item.name3"
-              [icon]="item.icon"
-              *ngFor="let item of item.skyboxreset"
-            ></app-reset>
-          </ng-container>
+        <ng-container *ngFor="let item of skyData | async">
+          <app-reset
+            [data]="item.data"
+            [name1]="item.name1"
+            [name2]="item.name2"
+            [name3]="item.name3"
+            [icon]="item.icon"
+            *ngFor="let item of item.skyboxreset"
+          ></app-reset>
+        </ng-container>
 
-          <!-- <div class="box__main__bottom__right__item__items">
+        <!-- <div class="box__main__bottom__right__item__items">
             <div class="box__main__bottom__right__item__items__top">
               <p>sky box</p>
               <p>reset</p>
@@ -386,16 +379,10 @@
               <p>hold for 2s</p>
             </div>
           </div> -->
-
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
 
 <!--
 
