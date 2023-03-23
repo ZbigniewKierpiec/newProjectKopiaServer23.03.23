@@ -34,10 +34,7 @@ import { HomeBtnComponent } from './components/sky/components/d-pad/home-btn/hom
 import { BackUpComponent } from './components/sky/components/d-pad/back-up/back-up.component';
 import { ResetComponent } from './components/sky/components/d-pad/reset/reset.component';
 import { SearchComponent } from './components/sky/components/search/search.component';
-
-
-
-
+import { DPadTestComponent } from './components/d-pad-test/d-pad-test.component';
 
 const appRoute: Routes = [
   { path: 'details', component: DevicesDetailsComponent },
@@ -76,10 +73,7 @@ const appRoute: Routes = [
     BackUpComponent,
     ResetComponent,
     SearchComponent,
-
-
-
-
+    DPadTestComponent,
   ],
   imports: [
     BrowserModule,

@@ -197,6 +197,28 @@
           "klasa": "box__search__top__items box__search__top__items--last",
           "data": "presets"
         }
+      ],
+      "dpad": [
+        {
+          "name": "top",
+          "data": "top"
+        },
+        {
+          "name":"right",
+          "data":"right"
+        },
+        {
+          "name":"bottom",
+          "data":"bottom"
+        },
+        {
+          "name":"left",
+          "data":"left"
+        },
+        {
+          "name":"ok",
+          "data":"ok"
+        }
       ]
     }
   ]

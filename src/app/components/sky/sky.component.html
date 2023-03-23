@@ -169,11 +169,11 @@
             class="box__main__left__bottom__item__items box__main__left__bottom__item__items--last"
           >
             0
-          </div>
+         </div> -->
            <div
             class="box__main__left__bottom__item__items box__main__left__bottom__item__items--clear"
           ></div>
-        --></div>
+        </div>
       </div>
     </div>
     <div class="box__main__right">
@@ -204,8 +204,15 @@
           ></app-home-btn>
         </ng-container>
 
-        <!-- ------ -->
+        <ng-container *ngFor="let item of skyData | async">
+          <app-d-pad-test
+           *ngFor="let item of item.dpad"
+            [name]="item.name"
+          ></app-d-pad-test>
+        </ng-container>
 
+        <!-- ------ -->
+        <!--
         <div
           data-numbers="top"
           class="box__main__right__box__item box__main__right__box__item--top"
@@ -286,8 +293,9 @@
         </div>
         <div
           class="box__main__right__box__item box__main__right__box__item--bottom"
-        ></div>
+        ></div> -->
         <!-- -------- -->
+
         <div
           *ngFor="let item of skyData | async"
           class="box__main__right__box__bottomLeft"
