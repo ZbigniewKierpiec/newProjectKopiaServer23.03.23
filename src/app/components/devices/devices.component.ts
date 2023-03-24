@@ -10,6 +10,7 @@ import {
   AfterContentInit,
   AfterViewChecked,
   AfterContentChecked,
+  OnDestroy,
 } from '@angular/core';
 import { DevicesService } from 'src/app/services/devices.service';
 import { SwiperOptions } from 'swiper';
@@ -48,14 +49,12 @@ SwiperCore.use([Autoplay]);
   templateUrl: './devices.component.html',
   styleUrls: ['./devices.component.scss'],
 })
-export class DevicesComponent implements OnInit {
+export class DevicesComponent implements OnDestroy {
   @Output() send: EventEmitter<string> = new EventEmitter<string>();
   devices: Device[] = Devices;
   // devices: Dial[] = Diale;
   devices2: Observable<any[]>;
   devicesDials: Observable<any[]>;
-
-
 
   check: boolean;
   activeDevice;
@@ -80,8 +79,20 @@ export class DevicesComponent implements OnInit {
     private device: DevicesService,
     private users: UsersService,
     private activeUser: ActiveUserService,
-    private dials:DialService
-  ) {}
+    private dials: DialService
+  ) {
+    this.activeUser.onDevicesSend.subscribe((data) => {
+      data.id;
+    });
+
+    this.device.onDeviceActive.subscribe((data) => {
+      this.activeDevice = data;
+    });
+
+    this.devices2 = this.users.getUserId();
+
+    this.devicesDials = this.dials.getDials();
+  }
 
   checked(item: Device) {
     this.check = !this.check;
@@ -100,36 +111,8 @@ export class DevicesComponent implements OnInit {
     this.device.onDevicesSend.emit(zee);
   }
 
-  ngOnInit(): void {
-
-
- this.activeUser.onDevicesSend.subscribe((data)=>{
- data.id;
- })
-
-
-
-
-    this.device.onDeviceActive.subscribe((data) => {
-      this.activeDevice = data;
-    });
-
-
-
-
-
-    this.devices2 = this.users.getUserId();
-
-
-
-
-    this.devicesDials   = this.dials.getDials();
-
-
-
-
-
-
-
+  ngOnDestroy(): void {
+    this.activeUser.onDevicesSend.unsubscribe();
+    this.device.onDeviceActive.unsubscribe();
   }
 }

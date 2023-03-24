@@ -11,7 +11,7 @@ import { SkyService } from './sky services/sky.service';
   templateUrl: './sky.component.html',
   styleUrls: ['./sky.component.scss'],
 })
-export class SkyComponent implements OnInit {
+export class SkyComponent {
   @Input() active: string;
   @Input() data: string;
   @Output() check: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -21,7 +21,9 @@ export class SkyComponent implements OnInit {
   constructor(
     private devices: DevicesService,
     private skyServices: SkyService
-  ) {}
+  ) {
+    this.skyData = this.skyServices.getSky();
+  }
 
   sky() {
     this.skyActive = false;
@@ -45,9 +47,5 @@ export class SkyComponent implements OnInit {
 
   searchesData(e) {
     console.log(e.target.dataset.numbers);
-  }
-
-  ngOnInit(): void {
-    this.skyData = this.skyServices.getSky();
   }
 }

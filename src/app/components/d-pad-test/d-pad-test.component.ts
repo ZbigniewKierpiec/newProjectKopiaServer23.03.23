@@ -7,16 +7,14 @@ import { SkyService } from '../sky/sky services/sky.service';
   templateUrl: './d-pad-test.component.html',
   styleUrls: ['./d-pad-test.component.scss'],
 })
-export class DPadTestComponent implements OnInit {
+export class DPadTestComponent {
   @Input() name: string;
   @Input() data: string;
-  constructor(private sky: SkyService) {}
-
-  skyData: Observable<any[]>;
-
-  ngOnInit(): void {
+  constructor(private sky: SkyService) {
     this.skyData = this.sky.getSky();
   }
+
+  skyData: Observable<any[]>;
 
   dpad(e) {
     console.log(e.target.dataset.numbers);

@@ -200,24 +200,16 @@
       ],
       "dpad": [
         {
-          "name": "top",
-          "data": "top"
-        },
-        {
-          "name":"right",
-          "data":"right"
-        },
-        {
-          "name":"bottom",
-          "data":"bottom"
-        },
-        {
-          "name":"left",
-          "data":"left"
-        },
-        {
-          "name":"ok",
-          "data":"ok"
+          "nameTop": "top",
+          "dataTop": "top",
+          "nameLeft": "left",
+          "dataLeft": "left",
+          "nameBottom": "bottom",
+          "dataBottom": "bottom",
+          "nameRight": "right",
+          "dataRight": "right",
+          "nameMiddle": "ok",
+          "dataMiddle": "middle"
         }
       ]
     }

@@ -5,7 +5,7 @@ import { Component, Input, OnInit, Output , EventEmitter } from '@angular/core';
   templateUrl: './more1.component.html',
   styleUrls: ['./more1.component.scss']
 })
-export class More1Component implements OnInit {
+export class More1Component{
   @Input() klasa:string;
   @Input() zee:string;
   @Output()  switch:EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -20,8 +20,5 @@ check(){
 
 
 
-
-  ngOnInit(): void {
-  }
 
 }

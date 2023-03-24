@@ -4,6 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
   selector: 'app-color-btn',
   templateUrl: './color-btn.component.html',
   styleUrls: ['./color-btn.component.scss']
+
 })
 export class ColorBtnComponent implements OnInit {
   @Input() klasa: string;

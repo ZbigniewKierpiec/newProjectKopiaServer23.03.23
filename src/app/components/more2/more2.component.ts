@@ -5,14 +5,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   templateUrl: './more2.component.html',
   styleUrls: ['./more2.component.scss']
 })
-export class More2Component implements OnInit {
+export class More2Component{
   @Output()  switch:EventEmitter<boolean> = new EventEmitter<boolean>();
   closeMore2(){
     this.switch.emit();
   }
   constructor() { }
 
-  ngOnInit(): void {
-  }
 
 }

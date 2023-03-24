@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { DevicesService } from 'src/app/services/devices.service';
 import {
   trigger,
@@ -14,12 +14,8 @@ import { Showers } from './showers';
   selector: 'app-bathroom',
   templateUrl: './bathroom.component.html',
   styleUrls: ['./bathroom.component.scss'],
-
-
-
-
 })
-export class BathroomComponent implements OnInit {
+export class BathroomComponent implements OnDestroy {
   @Input() active: string;
 
   shower: Shower[] = Showers;
@@ -103,9 +99,7 @@ export class BathroomComponent implements OnInit {
   checkApple(event: boolean) {
     this.appleActive = event;
   }
-  constructor(private device: DevicesService) {}
-
-  ngOnInit(): void {
+  constructor(private device: DevicesService) {
     this.device.onDevicesSend.subscribe((e) => {
       console.log('to jest z Bath component' + e.name);
       if (e.name == 'sky tv') {
@@ -119,5 +113,9 @@ export class BathroomComponent implements OnInit {
         this.skyActive = false;
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    this.device.onDevicesSend.unsubscribe();
   }
 }

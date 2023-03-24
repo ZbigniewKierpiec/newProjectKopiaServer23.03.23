@@ -1,5 +1,11 @@
 import { DevicesService } from 'src/app/services/devices.service';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnDestroy,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
 import { Model } from '../users-right/model';
 import { Models } from '../users-right/models';
@@ -14,18 +20,16 @@ import { User } from '../User/user';
 import { Users } from '../User/users';
 import { ActiveUserService } from 'src/app/services/active-user.service';
 
-
-
 @Component({
   selector: 'app-users-right',
   templateUrl: './users-right.component.html',
   styleUrls: ['./users-right.component.scss'],
 })
-export class UsersRightComponent implements OnInit {
+export class UsersRightComponent implements OnDestroy {
   @Output() send: EventEmitter<number> = new EventEmitter<number>();
   isActive: boolean = false;
   users: Model[] = Models;
-  liczba:any=0;
+  liczba: any = 0;
   userName: string = 'John';
   userImage: string = 'assets/user.jpeg';
   cameraT: boolean = false;
@@ -41,45 +45,49 @@ export class UsersRightComponent implements OnInit {
   user_name: string = '';
   user__password: string = '';
   // uzytkownicy:Observable<Model[]>;
-  uzytkownicy:Observable<Users[]>;
+  uzytkownicy: Observable<Users[]>;
 
-  constructor(private login: DevicesService, private Users: UsersService , private activeUser:ActiveUserService) {}
+  constructor(
+    private login: DevicesService,
+    private Users: UsersService,
+    private activeUser: ActiveUserService
+  ) {
+    this.login.users.subscribe((e) => {
+      this.user_name = e.username;
+      this.user__password = e.password;
+      console.log(
+        'To jest z user  user-right copmponent' +
+          this.user_name +
+          this.user__password
+      );
+    });
+
+    this.uzytkownicy = this.Users.getUsers();
+  }
 
   user() {
     this.isActive = !this.isActive;
-
   }
 
-  userChange(item:any) {
-
+  userChange(item: any) {
     this.userName = item.name;
     this.userImage = item.image;
-    this.isActive=false;
-   this.liczba = item;
-   console.log(item)
-
-
-
-
-
-
+    this.isActive = false;
+    this.liczba = item;
+    console.log(item);
 
     //  this.Users.getUsers().pipe(
     //   map((user) => user.filter((e) => e.id === item.id))
     // );
 
-    this.activeUser.onDevicesSend.emit(item)
-
-
+    this.activeUser.onDevicesSend.emit(item);
   }
 
   camera() {
-
     this.cameraT = !this.cameraT;
   }
 
   cameraC(item: Camera) {
-
     this.cameraImage = item.image;
     this.cameraName = item.name;
     this.cameraActive = item.active;
@@ -96,33 +104,13 @@ export class UsersRightComponent implements OnInit {
   }
 
   presetsClick(item: Preset) {
-
     this.isSelectedPresets = item.name;
   }
 
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
 
-
-
-  ngOnInit(): void {
-    this.login.users.subscribe((e) => {
-      this.user_name = e.username;
-      this.user__password = e.password;
-      console.log(
-        'To jest z user  user-right copmponent' +
-          this.user_name +
-          this.user__password
-      );
-
-
-
-    });
-
-       this.uzytkownicy   =     this.Users.getUsers();
-
-
-
-
-
-
+    this.login.users.unsubscribe();
   }
 }

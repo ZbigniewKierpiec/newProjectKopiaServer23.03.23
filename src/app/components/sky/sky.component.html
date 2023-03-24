@@ -207,7 +207,8 @@
         <ng-container *ngFor="let item of skyData | async">
           <app-d-pad-test
            *ngFor="let item of item.dpad"
-            [name]="item.name"
+            [name]="item.nameMiddle"
+
           ></app-d-pad-test>
         </ng-container>
 

@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  animate,
-  style,
-  transition,
-  trigger,
-  state,
+  
 } from '@angular/animations';
 import { Model } from '../app/components/temperature-top/model';
 import { Models } from '../app/components/temperature-top/models';
